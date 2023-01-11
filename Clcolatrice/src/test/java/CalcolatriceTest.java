@@ -21,6 +21,11 @@ public class CalcolatriceTest {
         assertEquals(2.0, miaCalcolatrice.divisione(8, 4), delta);
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void testDivisione0() {
+        assertEquals(miaCalcolatrice.divisione(8, 0), delta);
+    }
+
     @Test
     public void testPotenza() {
         assertEquals(8.0, miaCalcolatrice.potenza(2, 3), delta);
